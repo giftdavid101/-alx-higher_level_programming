@@ -1,11 +1,9 @@
 #!/usr/bin/python3.8
-def hidden():
 
-    import hidden_4
-
-    methods = dir(hidden_4)
-    for method in methods:
-        if method[0].isalnum():
-            print("{}".format(method))
 if __name__ == "__main__":
-    hidden()
+    """Print all names defined by hidden_4 module"""
+    import hidden_4
+    names = dir(hidden_4)
+    for name in names:
+        if name[:2] != "__":
+            print(name)
